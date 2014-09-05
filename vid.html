@@ -3,7 +3,42 @@
 <head>
 </head>
 <body>
-<video src="http://techslides.com/demos/sample-videos/small.ogv">
+<video src="http://techslides.com/demos/sample-videos/small.ogv" id=vid1 controls="controls1">
 </video>
+<script>
+    var v = document.getElementById('videoPlayer');
+
+    <!-- Auto play -->
+    v.play()
+
+    <!-- Play, Pause -->
+    v.addEventListener('click',function(){
+        if (v.paused == false) {
+            v.pause();
+            v.firstChild.nodeValue = 'Play';
+        }
+        else {
+            v.play();
+            v.firstChild.nodeValue = 'Pause';
+        }
+    });
+    var v = document.getElementById('videoid');
+v.addEventListener(
+    'play', 
+    function() { 
+        v.play();
+    }, 
+    false);
+
+v.onclick = function() {
+    if (v.paused) {
+        v.play();
+    } else {
+        v.pause();
+    }
+
+    return false;
+};
+    </script>
 </body>
 </html>
