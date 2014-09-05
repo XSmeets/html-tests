@@ -1,2 +1,2 @@
-js-tests
+html-tests
 ========
